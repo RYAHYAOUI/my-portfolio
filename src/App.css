@@ -1,0 +1,434 @@
+/* 🔹 General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #2a0a5e; /* Solid Dark Violet */
+  color: white;
+  overflow-x: hidden; /* Prevents horizontal scroll issues */
+}
+/* 🔹 Section Separator */
+.section-separator {
+  width: 40%; /* Shortened width */
+  height: 2px;
+  background-color: white;
+  margin: 50px auto; /* Centered */
+  opacity: 0.8;
+  border: none;
+}
+
+
+/* 🔹 Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 🔹 Navbar Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  max-width: 1200px;
+  list-style: none;
+}
+
+/* 🔹 Tab Items */
+.tab-item {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Increased spacing between icon and text */
+}
+
+/* 🔹 Tab Icons */
+.tab-icon {
+  font-size: 1.5rem;
+}
+
+/* 🔹 Tab Links */
+.tabs a {
+  color: white;
+  text-decoration: none !important;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 5px 20px;
+  white-space: nowrap;
+}
+
+/* 🔹 Responsive Navbar for Small Screens */
+@media (max-width: 900px) {
+  .tabs {
+    gap: 20px;
+  }
+
+  .tabs a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+}
+
+/* 🔹 Hover Effect: White Underline */
+.tabs a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.tabs a:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.tabs a:hover::after {
+  transform: scaleX(1);
+}
+
+/* 🔹 Full-Screen Sections */
+.section {
+  width: 100vw;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* 🔹 Hero Section */
+.hero-section {
+  padding-top: 200px;
+  text-align: center;
+  background: #2a0a5e;
+  color: white;
+  width: 100vw;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* 🔹 About Me Text (Shifted to the Left & Justified) */
+.about-text {
+  font-size: 1.25rem;
+  margin-top: 20px;
+  text-align: justify;
+  max-width: 700px;
+  margin-left: 10%; /* Shifted to the left */
+  padding: 10px;
+}
+
+/* 🔹 "I'm Ridha Yahyaoui" (White Color) */
+.hero-section h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  margin-left: 10%;
+}
+
+/* 🔹 Section Titles */
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+/* 🔹 Skills Section */
+.skills-section {
+  background-color: #2a0a5e;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* 🔹 Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+/* 🔹 Category Container */
+.category-container {
+  text-align: center;
+  flex: 1 1 300px;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+/* 🔹 Category Titles */
+.category-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px; /* Added spacing between title and skills */
+}
+
+/* 🔹 Skill Boxes */
+.skill-box {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  color: white;
+}
+
+/* 🔹 Hover Effect for Skill Boxes */
+.skill-box:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🔹 Skill Row */
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* 🔹 Programming Category (Placed Below) */
+.programming-category {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* 🔹 Footer */
+.footer {
+  background-color: #1a063d;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+/* 🔹 Education Section */
+.education-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: #2a0a5e;
+  color: white; /* Ensuring title is white */
+}
+
+.education-section h2 {
+  color: white; /* Explicitly setting the title color to white */
+}
+
+/* 🔹 Timeline */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+/* 🔹 Timeline Line */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: white;
+  top: 9%; /* Adjusted to move up */
+  bottom: 20%; /* Adjusted to prevent surpassing bottom circle */
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* 🔹 Timeline Item */
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 50px;
+  z-index: 2;
+}
+
+/* 🔹 Timeline Icon (Circle) */
+.timeline-icon {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  border: 3px solid #2a0a5e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #2a0a5e;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* 🔹 Timeline Date Positions (Closer to Circles) */
+.timeline-item:first-child .timeline-date {
+  left: calc(50% + 35px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(2) .timeline-date {
+  left: calc(50% - 150px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-item:last-child .timeline-date {
+  left: calc(50% + 35px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 🔹 Timeline Date Styling */
+.timeline-date {
+  width: 120px;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  position: absolute;
+}
+
+/* 🔹 Timeline Content (Small Box) */
+.timeline-content {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 2px solid white;
+  position: relative;
+}
+
+/* 🔹 Horizontal Line Connecting Circle to Box */
+.timeline-connector {
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 🔹 Left and Right Positioning */
+.timeline-content.left {
+  margin-right: auto;
+  text-align: right;
+  position: relative;
+}
+
+.timeline-content.right {
+  margin-left: auto;
+  text-align: left;
+  position: relative;
+}
+
+/* 🔹 Horizontal Line Positions */
+.timeline-content.left::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background: white;
+  top: 50%;
+  right: -50px;
+}
+
+.timeline-content.right::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background: white;
+  top: 50%;
+  left: -50px;
+}
+
+/* 🔹 Remove Background Box Around the Timeline */
+.timeline-container {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+/* Projects Section */
+.projects-section {
+  background: #2a0a5e; /* Matches your background */
+  color: white;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+/* Individual Project Item */
+.project-item {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Project Item Headings & Paragraphs */
+.project-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Styling for the Project Images */
+.project-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Ensure all images display as block elements */
+img {
+  display: block;
+  max-width: 100%;
+}
+
